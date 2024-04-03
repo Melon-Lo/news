@@ -1,5 +1,5 @@
 import type { ArticleDetails } from "../api/types/articleDetails";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import altImg from "../assets/alternative-article-img.jpg"
 
 interface ArticleItemProps {

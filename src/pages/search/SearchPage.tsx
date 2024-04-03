@@ -11,7 +11,7 @@ export default function SearchPage() {
   })
 
   return (
-    <div className="w-10/12">
+    <div className="w-10/12 max-w-5xl">
       <h1 className="text-center font-bold text-3xl mt-10 mb-10">搜尋結果</h1>
       <div>{renderedArticles}</div>
     </div>

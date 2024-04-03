@@ -1,6 +1,7 @@
 import axios from "axios";
 import { apiKey, baseUrl, defaultCountry } from "../basicSettings";
 import type { TopHeadline } from "../types/topHeadline"
+import { handleDate } from "../../functions/handleString";
 
 export async function getTopHeadlines() {
   try {
@@ -11,7 +12,7 @@ export async function getTopHeadlines() {
       return {
         ...article,
         // 讓日期只留下年月日
-        publishedAt: article.publishedAt.split('T')[0]
+        publishedAt: handleDate(article.publishedAt)
       };
     });
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { apiKey, baseUrl } from "../basicSettings";
 import type { ArticleDetails } from "../types/articleDetails";
+import { handleDate } from "../../functions/handleString";
 
 export async function searchArticles(term: string) {
   try {
@@ -11,7 +12,7 @@ export async function searchArticles(term: string) {
       return {
         ...article,
         // 讓日期只留下年月日
-        publishedAt: article.publishedAt.split('T')[0]
+        publishedAt: handleDate(article.publishedAt)
       };
     });
 

@@ -1,4 +1,4 @@
-import type { TopHeadline } from "../api/types/TopHeadline";
+import type { TopHeadline } from "../api/types/topHeadline";
 
 interface TopHeadlineItemProps {
   pack: TopHeadline;

@@ -1,4 +1,4 @@
-import type { TopHeadline } from "../types/TopHeadline"
+import type { TopHeadline } from "../types/topHeadline"
 import axios from "axios";
 import { apiKey, baseUrl, defaultCountry } from "../basicSettings";
 
@@ -7,7 +7,7 @@ export async function getTopHeadlines() {
     const res = await axios.get(`${baseUrl}/top-headlines?country=${defaultCountry}&apiKey=${apiKey}`);
     const articles = res.data.articles;
 
-    const updatedArticles = articles.map(article => {
+    const updatedArticles = articles.map((article: { publishedAt: string; }) => {
       return {
         ...article,
         // 讓日期只留下年月日

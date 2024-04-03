@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl my-5">本日頭條</h1>
+      <h1 className="text-center font-bold text-3xl mt-10 mb-5">本日頭條</h1>
       <div className="flex flex-col items-center">
         {renderedTopHeadlines}
       </div>

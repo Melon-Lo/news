@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import { homeLoader } from "./pages/home/homeLoader";
 import SearchPage from "./pages/search/SearchPage";
+import { searchLoader } from "./pages/search/searchLoader";
 import DetailsPage from "./pages/details/DetailPage";
 import Root from "./pages/Root";
 
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/search',
-        element: <SearchPage />
+        element: <SearchPage />,
+        loader: searchLoader,
       },
       {
         path: '/news/:article',

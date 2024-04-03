@@ -1,6 +1,6 @@
-import type { TopHeadline } from "../types/topHeadline"
 import axios from "axios";
 import { apiKey, baseUrl, defaultCountry } from "../basicSettings";
+import type { TopHeadline } from "../types/topHeadline"
 
 export async function getTopHeadlines() {
   try {
@@ -17,6 +17,6 @@ export async function getTopHeadlines() {
 
     return updatedArticles as TopHeadline[];
   } catch (err) {
-    console.error('[Get Top Headlines Error]', err)
+    console.error('[Get Top Headlines Failed]', err)
   }
 }

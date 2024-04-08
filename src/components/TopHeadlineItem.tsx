@@ -7,20 +7,20 @@ interface TopHeadlineItemProps {
   pack: TopHeadline;
 }
 
-interface Article {
-  author: string,
-  title: string,
-  description: string,
-  content: string,
-  publishedAt: string,
-}
+// interface Article {
+//   author: string,
+//   title: string,
+//   description: string,
+//   content: string,
+//   publishedAt: string,
+// }
 
 export default function TopHeadlineItem({ pack }: TopHeadlineItemProps) {
   const navigate = useNavigate();
   const { setSelectedArticle, selectedArticle } = useContext(ArticleContext);
 
   const handleClick = () => {
-    setSelectedArticle(pack);
+    setSelectedArticle({ ...pack, description: '', content: '' });
     navigate(`news/${pack.title}`);
     console.log(selectedArticle);
   }

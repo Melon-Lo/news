@@ -15,8 +15,8 @@ export default function ArticleItem({ pack }: ArticleItemProps) {
         <img className="h-full object-cover w-full" src={imgSrc} alt={'新聞圖片：' + pack.title} />
       </div>
       <div className="md:w-1/2 p-5">
-        <div className="flex justify-between items-center text-gray-500">
-          <p>{pack.author}</p>
+        <div className="flex justify-between items-center text-gray-500 flex-wrap">
+          <p className="pr-3 truncate">{pack.author}</p>
           <p className="min-w-24">{pack.publishedAt}</p>
         </div>
         <h1 className="text-2xl font-bold text-gray-800 py-3">{pack.title}</h1>
@@ -24,7 +24,7 @@ export default function ArticleItem({ pack }: ArticleItemProps) {
           {pack.description}
         </p>
         <button className="flex justify-end w-full pt-5">
-          <span className="bg-blue-800 text-gray-100 py-3 px-5 rounded-lg">查看更多</span>
+          <span className="bg-blue-700 hover:bg-blue-900 text-gray-100 py-3 px-5 rounded-lg">查看更多</span>
         </button>
       </div>
     </div>
